@@ -1,0 +1,66 @@
+:root {
+    --board-padding: 30px;
+    --box-size: 80vmin;
+    --tile-size: calc(10vmin - 2px);
+    --inner-shadow: inset 0 14px 28px rgba(0, 0, 0, 0.20), inset 0 10px 10px rgba(0, 0, 0, 0.18);
+    --outer-shadow: box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body {
+    background-color: #fff1d4;
+}
+
+.score-board {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    background-color: #ffd4d8;
+    box-shadow: var(--inner-shadow);
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: space-around;
+    height: 10vmin;
+    width: 20vmin;
+    border-radius: 10px;
+    padding: 20px;
+    color: #6886c5;
+}
+
+
+.score-board>h2 {
+    font-size: 32px;
+}
+
+.center {
+    position: fixed;
+    top: calc(10vmin - var(--board-padding));
+    left: calc(50% - 40vmin - var(--board-padding));
+    padding: 30px;
+    background-color: #ffa8ac;
+    border-radius: 20px;
+    box-shadow: var(--inner-shadow);
+
+}
+
+.board {
+    height: var(--box-size);
+    width: var(--box-size);
+    /* background-color: brown; */
+    display: flex;
+    flex-flow: wrap;
+}
+
+.board>* {
+    transition: all 0.3s ease-in;
+}
+
+.gridTile {
+    height: var(--tile-size);
+    width: var(--tile-size);
+    border-radius: 5px;
+}
+
+.gridTile:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
